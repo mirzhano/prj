@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+<body>
+    <center>
+        <header>
+            <h1>
+                Описание Сериала
+            </h1>
+        </header>
+
+        <div class="class">
+            <h2> Название - {{seria.title}}</h2>
+            <p>Описание -{{seria.description}}</p>
+            <p>Длительность - {{seria.cost}}</p>
+            <p>Характеристика-{{seria.characteristic}}</p>
+            <img src="{{seria.image.url}}" alt="" width="300" height="300">
+        </div>
+    </center>
+</body>

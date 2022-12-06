@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+		<html lang="en">
+		<head>
+    		<meta charset="UTF-8">
+    		<title>Series</title>
+		</head>
+		<body>
+<center>
+<div>
+    <ul>
+        {% for i in info %}
+            <li>
+                <h2>{{ i.title }}</h2>
+                <p>{{ i.description }}</p>
+                <img src="{{ i.image.url }}" alt="" width="100" height="100">
+                <p>{{ i.created_date }}</p>
+                <p>{{ i.updated_date }}</p>
+                <button class="btn">
+                    <a href="/show_detail/{{i.id}}/">Подробнее</a>
+                </button>
+
+                <a href="{{i.id}}/delete">delete</a>
+                <a href="{{i.id}}/update">edit</a>
+
+
+        {% endfor %}
+                <a href="/add/">add</a>
+    </ul>
+</div>
+</center>
+</body>
+</html>

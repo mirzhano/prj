@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parser</title>
+</head>
+<body>
+<form method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Start Parsing">
+
+</form>
+
+<button><a href="{% url 'parser:parser_view'  %}">FILM LIST</a></button>
+
+
+</body>
+</html>
